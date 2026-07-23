@@ -1,10 +1,16 @@
-import Header from "./Header.jsx"
+import Header from './components/Header/Header.jsx'
+import Timer from './components/Timer/Timer.jsx'
 
 function App() {
   
-
   return(
-    <Header/>
+    <div className="app">
+      <Header />
+
+      <main className="app-main">
+        <Timer />
+      </main>
+    </div>
   );
 }
 
