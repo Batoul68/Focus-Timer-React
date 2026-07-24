@@ -3,6 +3,25 @@
   src: url('./fonts/KinderChildKawaiiBubble-WpnAz.otf');
 }
 
+@font-face {
+  font-family: "Celestial";
+  src: url('./fonts/starust.regular.ttf');
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 
 
 
