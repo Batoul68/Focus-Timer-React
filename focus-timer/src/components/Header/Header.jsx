@@ -1,9 +1,10 @@
+import styles from './Header.module.css'
 
 function Header() {
 
   return(
-    <header>
-      <h2>Focus Timer</h2>
+    <header className={styles.header}>
+      <h1>Focus Timer</h1>
     </header>
   );
 }

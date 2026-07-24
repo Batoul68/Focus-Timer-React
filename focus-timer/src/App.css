@@ -1,0 +1,11 @@
+.app {
+  min-height: 100vh;
+  background: #1a1917;
+}
+
+.app-main {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  border: 1px solid red;
+}

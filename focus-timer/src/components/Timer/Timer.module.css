@@ -1,0 +1,29 @@
+.timer {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  border: 2px solid #292724;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #d1a87325;
+}
+
+.timerFrame {
+  position: absolute;
+  width: 150%;
+  left: 54%;
+  top: 40%;
+  transform: translate(-54%, -40%);
+  z-index: 1;
+}
+
+.timerCat {
+  position: absolute;
+  width: 39%;
+  height: auto;
+
+  top: 0px;
+  left: 0px;
+
+  z-index: 2;
+  
+}
