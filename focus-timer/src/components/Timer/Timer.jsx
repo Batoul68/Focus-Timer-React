@@ -4,11 +4,15 @@ import catAsleep from '../../assets/cat_asleep.gif';
 import catAwake from '../../assets/cat_awake.gif';
 import styles from './Timer.module.css';
 import TimerControls from "../TimerControls/TimerControls.jsx";
-const STARTING_TIME = 25*60;
+import TimeSetter from '../TimeSetter/TimeSetter.jsx';
+const DEFAULT_TIME = 25*60;
 
 function Timer() {
+  
+  const [startingTime, setStartingTime] = useState(DEFAULT_TIME);
+  const [timeLeft, setTimeLeft] = useState(DEFAULT_TIME);
 
-  const [timeLeft, setTimeLeft] = useState(STARTING_TIME);
+  const [selectedMinutes, setSelectedMinutes] = useState("25");
   
   const minutes = Math.floor(timeLeft/60);
   const seconds = timeLeft % 60;
@@ -25,7 +29,16 @@ function Timer() {
 
   function handleReset() {
     setIsRunning(false);
-    setTimeLeft(STARTING_TIME);
+    setTimeLeft(startingTime);
+  }
+
+  function handleSetTime(minutes) {
+    const newTimeInSeconds = minutes * 60;
+
+    setIsRunning(false);
+    setStartingTime(newTimeInSeconds);
+    setTimeLeft(newTimeInSeconds);
+
   }
 
   useEffect(() => {
@@ -51,22 +64,25 @@ function Timer() {
   }, [isRunning]);
 
   return(
-    <div className={styles.timer}>
-      <img className={styles.timerCat} src={isRunning ? catAwake : catAsleep} alt="asleep cat"></img>
-      <img className={styles.timerFrame} src={frame1} alt="timer frame"></img>
-      <div className={styles.timerNumber}>
-        <p>
-          {String(minutes).padStart(2, "0")}:
-          {String(seconds).padStart(2, "0")}
-        </p>
-      </div>
-      <TimerControls 
-        onStart={handleStart}
-        onPause={handlePause}
-        onReset={handleReset}
-      />
-    </div>
+    <div className={styles.timerLayout}>
+      <TimeSetter onApply={handleSetTime} />
 
+      <div className={styles.timer}>
+        <img className={styles.timerCat} src={isRunning ? catAwake : catAsleep} alt={isRunning ? "awake cat" : "asslep cat"}></img>
+        <img className={styles.timerFrame} src={frame1} alt="timer frame"></img>
+        <div className={styles.timerNumber}>
+          <p>
+            {String(minutes).padStart(2, "0")}:
+            {String(seconds).padStart(2, "0")}
+          </p>
+        </div>
+        <TimerControls 
+          onStart={handleStart}
+          onPause={handlePause}
+          onReset={handleReset}
+        />
+    </div>
+  </div>
   );
 }
 

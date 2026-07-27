@@ -1,0 +1,37 @@
+.timeSetter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.timeSetter .timeSetterLabel {
+  font-family: "Celestial", Arial, Helvetica, sans-serif;
+  color: #e1ba87;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.timeSetter .timeSetterInput {
+  width: 100px;
+  padding: 8px;
+  text-align: center;
+
+  background-color: #1a1917;
+  color: #e1ba87;
+
+  border: 2px solid #292724;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #d1a87325;
+}
+
+.timeSetter .timeSetterButton {
+  padding: 5px 5px;
+
+  font-family: "Celestial", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+
+  background-color: #e1ba87;
+  color: #1a1917;
+  border: 2px solid #1a1917;
+  border-radius: 10px;
+
+}
