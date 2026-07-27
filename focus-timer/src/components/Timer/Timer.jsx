@@ -18,6 +18,10 @@ function Timer() {
     setIsRunning(true);
   }
 
+  function handlePause() {
+    setIsRunning(false);
+  }
+
   useEffect(() => {
     if (!isRunning) {
       return;
@@ -50,7 +54,10 @@ function Timer() {
           {String(seconds).padStart(2, "0")}
         </p>
       </div>
-      <TimerControls onStart={handleStart}/>
+      <TimerControls 
+        onStart={handleStart}
+        onPause={handlePause}
+      />
     </div>
 
   );

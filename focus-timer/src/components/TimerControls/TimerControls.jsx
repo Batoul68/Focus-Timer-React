@@ -3,7 +3,7 @@ import startButton from '../../assets/startButton.svg';
 import pauseButton from '../../assets/pauseButton.svg';
 import resetButton from '../../assets/resetButton.svg';
 
-function TimerControls({onStart}) {
+function TimerControls({onStart, onPause}) {
   return(
     <div className={styles.timerControls}>
       <button 
@@ -14,7 +14,11 @@ function TimerControls({onStart}) {
         <img className={styles.startButton} src={startButton} alt="start button"></img>
       </button>
 
-      <button className={styles.buttonWrapper}>
+      <button 
+        className={styles.buttonWrapper}
+        onClick={onPause}
+        aria-label="Pause timer"
+      >
         <img className={styles.pauseButton} src={pauseButton} alt="pause button"></img>
       </button>
 
