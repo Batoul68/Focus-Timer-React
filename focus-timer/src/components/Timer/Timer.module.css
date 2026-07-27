@@ -30,14 +30,14 @@
 .timerNumber {
   position: absolute;
 
-  top: 23%;
-  left: 19%;
+  bottom: 7%;
+  left: 20%;
   
   color: #e1ba87;
   font-family: "Celestial";
   font-size: 150px;
   letter-spacing: 12px;
-  
+
   z-index: 3;
 
 }
