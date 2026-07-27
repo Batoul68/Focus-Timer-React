@@ -4,10 +4,11 @@ import cat1 from '../../assets/cat_asleep.gif';
 import cat2 from '../../assets/cat_awake.gif';
 import styles from './Timer.module.css';
 import TimerControls from "../TimerControls/TimerControls.jsx";
+const STARTING_TIME = 25*60;
 
 function Timer() {
 
-  const [timeLeft, setTimeLeft] = useState(25*60);
+  const [timeLeft, setTimeLeft] = useState(STARTING_TIME);
   
   const minutes = Math.floor(timeLeft/60);
   const seconds = timeLeft % 60;
@@ -20,6 +21,11 @@ function Timer() {
 
   function handlePause() {
     setIsRunning(false);
+  }
+
+  function handleReset() {
+    setIsRunning(false);
+    setTimeLeft(STARTING_TIME);
   }
 
   useEffect(() => {
@@ -57,6 +63,7 @@ function Timer() {
       <TimerControls 
         onStart={handleStart}
         onPause={handlePause}
+        onReset={handleReset}
       />
     </div>
 
