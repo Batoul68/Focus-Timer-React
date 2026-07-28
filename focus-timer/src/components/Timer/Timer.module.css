@@ -20,7 +20,7 @@
   display: block;
   position: absolute;
 
-  width: 150%;
+  width: 90%;
   height: auto;
 
   left: 54%;
@@ -36,8 +36,8 @@
   width: 39%;
   height: auto;
 
-  top: 0px;
-  left: 0px;
+  top: -2%;
+  left: 0%;
 
   z-index: 2;
 }
@@ -51,7 +51,7 @@
   color: #e1ba87;
   font-family: "Celestial", Arial, Helvetica, sans-serif;
 
-  font-size: clamp(55px, 20vw, 150px);
+  font-size: clamp(55px, 20vw, 155px);
   letter-spacing: clamp(3px, 2vw, 12px);
   white-space: nowrap;
 
