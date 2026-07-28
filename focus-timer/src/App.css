@@ -1,6 +1,6 @@
 .app {
   min-height: 100vh;
-  WIDTH: 100%;
+  width: 100%;
   background-image: url('./assets/background2.png');
   background-size: cover;
   background-position: center;

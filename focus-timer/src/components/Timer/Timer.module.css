@@ -1,7 +1,9 @@
 .timer {
   position: relative;
-  width: 600px;
-  height: 600px;
+  width: min(90vw, 600px);
+  aspect-ratio: 1 / 1;
+  height: auto;
+  margin: 0 auto;
   border: 2px solid #292724;
   border-radius: 10px;
   box-shadow: 5px 5px 5px #d1a87325;
@@ -11,20 +13,26 @@
  display: flex;
  flex-direction: column;
  align-items: center;
- gap: 30px;
+ gap: clamp(15px, 4vw, 30px);
 }
 
 .timerFrame {
+  display: block;
   position: absolute;
+
   width: 150%;
+  height: auto;
+
   left: 54%;
   top: 40%;
   transform: translate(-54%, -40%);
+
   z-index: 1;
 }
 
 .timerCat {
   position: absolute;
+
   width: 39%;
   height: auto;
 
@@ -42,9 +50,30 @@
   
   color: #e1ba87;
   font-family: "Celestial", Arial, Helvetica, sans-serif;
-  font-size: 150px;
-  letter-spacing: 12px;
+
+  font-size: clamp(55px, 20vw, 150px);
+  letter-spacing: clamp(3px, 2vw, 12px);
+  white-space: nowrap;
 
   z-index: 3;
+}
 
+@media (max-width: 600px) {
+  .timer {
+    width: 92vw;
+  }
+
+  .timerFrame {
+    width: 125%;
+  }
+
+  .timerCat {
+    width: 38%;
+  }
+
+    .timerNumber {
+    bottom: 8%;
+    font-size: clamp(50px, 19vw, 85px);
+    letter-spacing: clamp(2px, 1.5vw, 6px);
+  }
 }

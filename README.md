@@ -16,3 +16,5 @@ git clone https://github.com/Batoul68/Focus-Timer-React.git
 cd Focus-Timer-React
 npm install
 ```
+
+
