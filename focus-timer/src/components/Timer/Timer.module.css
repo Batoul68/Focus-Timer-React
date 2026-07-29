@@ -45,8 +45,9 @@
 .timerNumber {
   position: absolute;
 
-  bottom: 7%;
-  left: 20%;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   
   color: #e1ba87;
   font-family: "Celestial", Arial, Helvetica, sans-serif;
@@ -64,15 +65,16 @@
   }
 
   .timerFrame {
-    width: 125%;
+    width: 90%;
   }
 
   .timerCat {
     width: 38%;
   }
 
-    .timerNumber {
-    bottom: 8%;
+  .timerNumber {
+    top: 44%;
+    
     font-size: clamp(50px, 19vw, 85px);
     letter-spacing: clamp(2px, 1.5vw, 6px);
   }
