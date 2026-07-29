@@ -78,7 +78,7 @@ The cat illustration will change to its awake state when the timer is running an
 - Vercel
 - Git and GitHub
 
-## 🙌 Credits
+## Credits
 
 The custom interface, timer frame, background, and cat illustrations were designed for this project.
 
