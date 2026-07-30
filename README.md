@@ -96,5 +96,5 @@ Created as a portfolio project to practice:
 Created by **Batoul Al-Souaijet**
 
 [GitHub](https://github.com/Batoul68)
-[LinkedIn](https://www.linkedin.com/in/batoul-al-souaijet-detroit)
+[LinkedIn](https://www.linkedin.com/in/batoul-al-souaijet-dev)
 
